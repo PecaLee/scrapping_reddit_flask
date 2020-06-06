@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reddit Reader</title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="/">Reddit Reader</a>
+    </h1>
+    <h3>Reading: {% for selected in selecteds %}
+      r/{{selected}}
+      {% endfor %}
+    </h3>
+  </header>
+  <main>
+    <div>
+      {% for db in db_all %}
+      <h3>
+        <a href="{{db["link"]}}" target="_blank">{{db["title"]}}</a>
+      </h3>
+      <h4>{{db["vote"]}} upvotes, r/{{db["id"]}}</h4>
+      <hr>
+      {% endfor %}
+    </div>
+  </main>
+</body>
+
+</html>

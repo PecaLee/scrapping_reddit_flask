@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reddit Reader</title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Reddit Reader</h1>
+    <h3>Couldn't add subreddit</h3>
+  </header>
+    <main>
+        {% if result == None %}
+        <h4>That subreddit does not exit.</h4>
+        <h4><a href="/">← Go Back</a></h4>
+        {% elif result == "r" %}
+        <h4>Write the name without /r/</h4>
+        <h4><a href="/">← Go Back</a></h4>
+        {% else %}
+
+        {% endif %}
+    </main>
+</body>
+
+</html>
